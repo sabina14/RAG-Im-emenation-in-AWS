@@ -1,0 +1,4 @@
+#!C:\Users\sabin\OneDrive\Desktop\llmops\env\python.exe
+# EASY-INSTALL-SCRIPT: 'awscli==1.33.13','aws_completer'
+__requires__ = 'awscli==1.33.13'
+__import__('pkg_resources').run_script('awscli==1.33.13', 'aws_completer')

@@ -1,8 +1,5 @@
 RAG APPLICATION USING AWS SERVICES USING 
 aws lambda,aws ecr, langchain, hugging face, docker, aws bedrock
-
-1.create env using conda create -p env python=3.10 -y
-
 2.source activate ./env
 
 3.create requirements file and install all dependencies
@@ -26,7 +23,7 @@ aws lambda,aws ecr, langchain, hugging face, docker, aws bedrock
 18.create main.py and import libabries
 19. create test.json and write payload details that main.py requires
 20. at terminal aws configure-give access key and secret key,give region --useast1,type:json
-21.python main.py##donnects to api gets the output
+21.python main.py##donnects to api gets the output(renamed as llama2.py)
 22.try stable diffusion 
 
 https://github.com/sabina14/RAG-Implemenation-in-AWS.git
@@ -58,7 +55,39 @@ push to git---workflow should get updated
 
 in jobs ci cd shoutld get updated and docker image created in aws ecr 
 
+day5:
+activate env
 
+run app.py
+
+deploy image cretaed  in ecr--got to aws app runner--create service--container registry--
+ecr--give url --continue--deployment seting--automatic--create new service role\--next--service name:ragdeployment--4cpu--12gb--port no :8080..-createnew service role=--next deploy--check url for working
+
+
+amazon sagemaker--create domain--single user setup--(using meat llama2)(search hugging afce on aws sagemaker for deatil documentation)
+
+doaminname--login through iam--create new role----create bucket in s3 and add that bucket--next--sagemaker new--next--vpc--default----sg--next--submit--once domain craeted-got otuser-launch--sagemakerstudio--
+
+
+
+
+
+day6 & 7:
+
+goto amazon sagemaker. get started--sagemaker studio-open/ juytrt instance--python kernel--connect to cluster--code in llamasagemakercode.iypnb
+
+
+(sagemaker requires--iam,s3..hugging face/llama2/gemini)
+(search hugging afce on aws sagemaker for deatil documentation)
+
+jupyter lab space--configure the instance launch jupyrt lab and write the code
+
+
+below json modelid--llama2 hugging face model id
+instance type mlm5.2x large
+
+
+once deployed-goto homepage --deployment--you will get the end point
 
 
 

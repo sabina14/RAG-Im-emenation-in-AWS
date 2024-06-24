@@ -1,0 +1,9 @@
+setup.py
+QASystem.egg-info/PKG-INFO
+QASystem.egg-info/SOURCES.txt
+QASystem.egg-info/dependency_links.txt
+QASystem.egg-info/requires.txt
+QASystem.egg-info/top_level.txt
+~asystem/__init__.py
+~asystem/ingestion.py
+~asystem/retrievalandgeneration.py

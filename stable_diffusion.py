@@ -5,7 +5,7 @@ import os
 
 prompt="""
 
-provide me one 4k hd baby in karoke room.
+provide me one 4k hd baby in karoke.
 
 """
 

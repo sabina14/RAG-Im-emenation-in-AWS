@@ -1,0 +1,70 @@
+pip list
+pip installsagmeaker -u
+pip list |grep sagemaker
+import sagemakerimport boto3
+import numpy
+import scipy
+
+sagemaker_execution_role=None
+
+def setup_sagemaker_session(default_bucket=None):
+    global sagemaker_execution_role
+    session= sagemaker_session(default_bucket=default_bucket)
+    try:
+        sagemaker_execution_role = sagemaker.get_execution_role()
+    except ValueError:
+        boto3.client('iam')
+        sagemaker_execution_role = iam.getrole(RoleName='sagemaker_execution_role')['Role']['Arn']
+
+    return session, sagemaker_execution_role
+
+
+
+
+
+def mask_account_id(account_id):
+    return '*'*len(account_id)
+
+
+def main():
+    sagemaker_session_bucket = None
+    session, sagemaker_execution_role=setup_sagemaker_session(default_bucket=sagemaker_session_bucket)
+    account_id = sagemaker_execution_role[':'][4]
+    masked_account_id = mask_account_id(account_id)
+    sagemaker_execution_role.replace(account,mask_account_id)
+    print(f"sagemaker role Arn : {masked role}")
+    print(f "sagemaker session region : {session.boto_region_name}")
+ 
+
+main()
+
+from sagemaker.huggingface import get_huggingface_llm_image_uri
+
+get_huggingface_llm_image_uri(
+
+    "huggingface",
+    version='0.9.3')
+
+
+print(f"llm image url : {llm_image}")
+
+
+#service quota gives datails about services running
+#goto mlm5 2xlarge jupyter instance and request access and also request for end point use
+
+#give 1 for quota
+
+#https://huggingface.co/blog/sagemaker-huggingface-llm
+#description
+import json
+
+
+
+
+
+
+
+
+
+
+
