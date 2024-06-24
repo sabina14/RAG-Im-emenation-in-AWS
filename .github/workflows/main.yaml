@@ -52,4 +52,4 @@ jobs:
           # Build a docker container and
           # push it to ECR so that it can
           docker build -t ${{ secrets.851725495815.dkr.ecr.us-east-1.amazonaws.com/rag }}:$IMAGE_TAG .
-          docker push ${{ secrets.AWS_ECR851725495815.dkr.ecr.us-east-1.amazonaws.com/rag_REPO_URI }}:$IMAGE_TAG
+          docker push ${{ secrets.AWS_ECR851725495815.dkr.ecr.us-east-1.amazonaws.com/rag }}:$IMAGE_TAG
